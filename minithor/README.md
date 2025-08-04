@@ -47,6 +47,16 @@ cat .dockerconfigjson
 
 Once this registry auth file has been created, copy the file (default path is `~/.docker/config.json` for most linux systems, must be manually created on mac) to the project directory and rename it to `.dockerconfigjson`.
 
+### Build the operator image
+
+The Thorium operator runs in its own container. Build the image before deploying:
+
+```bash
+docker build -f operator/Dockerfile -t thorium-operator:latest .
+# if using Minikube, load the image into its cache
+minikube image load thorium-operator:latest
+```
+
 ### Deploy Dependencies
 
 Thorium requires persistent storage interfaces a tracing API and an operator. Lets deploy these dependencies.
