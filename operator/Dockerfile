@@ -1,5 +1,5 @@
 # Build the thorium operator binary
-FROM rust:1.91 as builder
+FROM rust:1.81 as builder
 WORKDIR /build
 COPY . .
 RUN RUSTFLAGS="-C target-feature=+aes,+sse2" cargo +nightly build --release -p thorium-operator
