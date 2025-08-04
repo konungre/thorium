@@ -17,9 +17,9 @@ spec:
       serviceAccountName: thorium
       automountServiceAccountToken: true
       containers:
-        - name: operator
-          image: <OPERATOR IMAGE>
-          imagePullPolicy: Always
+          - name: operator
+            image: thorium-operator:latest
+            imagePullPolicy: Always
           #command: ["/bin/bash", "-c"]
           #args: ["sleep 1000"]
           resources:
