@@ -42,16 +42,20 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 8000,
       strictPort: true,
-      cors: false,
+      cors: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
       },
     },
     preview: {
-      cors: false,
+      cors: true,
       strictPort: false,
       headers: {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
       },
     },
     define: {
