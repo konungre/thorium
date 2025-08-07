@@ -1,5 +1,5 @@
 #!/bin/bash
 shopt -s expand_aliases
 source ~/.bash_aliases
-kubectl port-forward svc/ingress-nginx-controller --address 0.0.0.0 -n ingress-nginx 8080:80
+kubectl port-forward svc/ingress-nginx-controller --address 0.0.0.0 -n ingress-nginx 80:80
 #minikube tunnel
