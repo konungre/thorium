@@ -118,3 +118,7 @@ kubectl apply -f infrastructure/thorium/rbac.yml
 kubectl apply -f infrastructure/thorium/operator.yml -n thorium
 kubectl apply -f infrastructure/thorium/ingress.yml -n thorium
 kubectl rollout status --watch --timeout=600s deployment.apps/operator -n thorium
+
+# change system-wide privileged port range
+echo 'net.ipv4.ip_unprivileged_port_start=80' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
