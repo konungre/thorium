@@ -122,3 +122,5 @@ kubectl rollout status --watch --timeout=600s deployment.apps/operator -n thoriu
 # change system-wide privileged port range
 echo 'net.ipv4.ip_unprivileged_port_start=80' | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
+
+kubectl create -n thorium -f thorium-cluster.yml
