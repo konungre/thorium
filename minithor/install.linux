@@ -12,6 +12,7 @@ source ~/.bashrc
 # start of k8s cluster
 minikube start --cni calico
 # add required plugins
+minikube addons enable volumesnapshots
 minikube addons enable csi-hostpath-driver
 minikube addons enable ingress
 minikube addons enable ingress-dns
