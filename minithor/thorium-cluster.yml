@@ -54,7 +54,9 @@ spec:
         local:
           level: "Info"
       cors:
-        insecure: true
+        insecure: false
+        domains:
+          - http://localhost
       tags:
         partition_size: 3600
       files:
