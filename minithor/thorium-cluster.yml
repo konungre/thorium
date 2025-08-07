@@ -4,7 +4,7 @@ metadata:
   name: dev
   namespace: thorium
 spec:
-  registry: "ghcr.io/konungre/thorium"
+  registry: "ghcr.io/konungre/konungre/thorium"
   version: "latest" 
   #registry_auth:
   #  "<registry.domain:port/path/to/thorium/image>": "REGISTRY_TOKEN"
